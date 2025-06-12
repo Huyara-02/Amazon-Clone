@@ -1,4 +1,4 @@
-
+import {cart} from '../data/cart.js' // all the imports shall always be at the top
 let productsHTML = '';
 
 products.forEach((product) =>{
