@@ -1,5 +1,4 @@
 
-
 let productsHTML = '';
 
 products.forEach((product) =>{
@@ -19,7 +18,7 @@ products.forEach((product) =>{
             <img class="product-rating-stars"
               src="images/ratings/rating-${product.rating.stars*10}.png">
             <div class="product-rating-count link-primary">
-              ${product.rating.counts}
+              ${product.rating.count}
             </div>
           </div>
 
@@ -79,5 +78,13 @@ button.addEventListener('click', ()=>{
     });
   } 
   console.log(cart);
+  let cartQuantity = 0;
+  cart.forEach((item)=>{
+  cartQuantity += item.quantity;
+document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+
+})
+
 }));
+
 
